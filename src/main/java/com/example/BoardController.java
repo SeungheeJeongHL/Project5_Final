@@ -1,5 +1,7 @@
-package com.example.board;
+package com.example;
 
+import com.example.board.BoardServiceImpl;
+import com.example.board.BoardVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -23,7 +25,7 @@ public class BoardController {
 
     @RequestMapping(value = "/add", method = RequestMethod.GET)
     public String addPost() {
-        return "addform";
+        return "addpostform";
     }
 
     @RequestMapping(value = "/addok", method = RequestMethod.POST)
@@ -36,11 +38,11 @@ public class BoardController {
         return "redirect:list";
     }
 
-    @RequestMapping(value = "/editform/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/editpost/{id}", method = RequestMethod.GET)
     public String editPost(@PathVariable("id") int id, Model model) {
         BoardVO boardVO = boardService.getBoard(id);
         model.addAttribute("u", boardVO);
-        return "editform";
+        return "editpost";
     }
 
     @RequestMapping(value = "/editok", method = RequestMethod.POST)

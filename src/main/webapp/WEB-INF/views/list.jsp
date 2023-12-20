@@ -1,8 +1,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%--<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page isELIgnored="false" %>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
     <title>게시판</title>
     <!-- CSS only -->
@@ -66,7 +67,7 @@
             <td>${u.regDate}</td>
 
             <td>
-                <button type="button" class="button" onclick="location.href='editform/${u.seq}'">
+                <button type="button" class="button" onclick="location.href='editpost/${u.seq}'">
                     수정
                 </button>
                 <button type="button" class="button" onclick="delete_ok('${u.seq}')">
