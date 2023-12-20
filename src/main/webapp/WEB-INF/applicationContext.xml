@@ -7,9 +7,9 @@
     <bean name="dataSource"
           class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="org.mariadb.jdbc.Driver" />
-        <property name="url" value="jdbc:mariadb://walab.handong.edu:3306/p233_22200680" />
-        <property name="username" value="p233_22200680" />
-        <property name="password" value="fo7aFo" />
+        <property name="url" value="jdbc:mariadb://walab.handong.edu:3306/p233_22200671" />
+        <property name="username" value="p233_22200671" />
+        <property name="password" value="sohVa8" />
     </bean>
 
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
